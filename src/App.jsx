@@ -31,10 +31,15 @@ useEffect(() => {
  
   return (
     <>
+
+  <h1>Explore News</h1>
     <main>
+
       {data.length === 0 ? (
   <h2>Loading...</h2>
+
 ) :
+    
      (data.map((article ,index) => (
       
          <div key = {index}>

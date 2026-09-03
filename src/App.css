@@ -5,13 +5,31 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    margin: 30px auto;
+    font-size: 4rem;
+    color: rgba(22, 22, 22, 0.897);
+}
+
 main{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
-    padding: 30px;
-    margin: auto 20px;
-    
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+   
+    gap: 15px;
+    padding: 30px ;
+    margin:  auto ;
+    /* background-color: blue; */
+   
+    align-items: center;
+    flex-wrap: wrap;
     
    
 }
@@ -19,14 +37,19 @@ main{
 main div{
     display: flex;
     flex-direction: column;
+    height: 500px;
     gap: 15px;
     background-color: rgb(253, 235, 213);
-    padding: 15px ;
+    padding:  15px ;
     border-radius: 10px;
-    
+    width: 32%;
+    overflow-y: hidden;
+   
+        
 
 }
 main img{
+   
     height: 200px;
     border-radius: 5px;
    
@@ -36,11 +59,63 @@ main img{
 }
 h3{
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 
 main div p{
-    line-height: 1.5;
+    line-height: 1.4;
+    font-size: 15px;
 
     
 }
+
+ @media(max-width:600px){
+
+    h1{
+        font-size: 2rem;
+    }
+    main {
+ 
+    flex-direction : column;
+    
+    
+    }
+
+    main div{
+        min-width: 300px;
+        max-width: 100%;
+        
+        height: fit-content;
+        margin: 0 auto;
+    }
+  
+} 
+
+ @media(max-width:810px){
+
+    h1{
+        font-size: 3rem;
+    }
+  
+
+    main div{
+        width: 48%;
+        height: 450px;
+
+        }
+        h3{
+            font-size: 1rem;
+        }
+
+        h4{
+            font-size: 0.8rem;
+        }
+    main div p{
+            line-height: 1.3;
+            font-size: small;
+        }
+
+      
+  
+} 
